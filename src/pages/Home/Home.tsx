@@ -1,17 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { MenuItem } from './MenuItem';
+import { MenuDirectory } from './components/MenuDirectory';
 
 export const Home: React.FC = (props) => {
   return (
     <HomePage>
-      <DirectoryMenu>
-        <MenuItem title="Hello" subtitle="world" imageUrl={"imagepath"} />
-        <MenuItem title="Hello" subtitle="world" imageUrl={"imagepath"} />
-        <MenuItem title="Hello" subtitle="world" imageUrl={"imagepath"} />
-        <MenuItem title="Hello" subtitle="world" imageUrl={"imagepath"} />
-      </DirectoryMenu>
+      <MenuDirectory></MenuDirectory>
     </HomePage>
   );
 };
@@ -21,11 +16,4 @@ const HomePage = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 20px 80px;
-`;
-
-const DirectoryMenu = styled.div`
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
 `;
